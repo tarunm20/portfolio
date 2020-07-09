@@ -23,8 +23,8 @@ app.post('/api/email', (req, res, next) => {
     const msg = {
         to: 'tarun.murugan24@gmail.com',
         from: 'tarun.murugan24@gmail.com',
-        subject: 'Portfolio Contact',
-        text: req.body.email + '\n' + '\n' + req.body.message
+        subject: 'Portfolio Contact: ' + req.body.email,
+        text: req.body.message
     };
 
     sendGrid.send(msg)
@@ -41,7 +41,7 @@ app.post('/api/email', (req, res, next) => {
         });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
   });

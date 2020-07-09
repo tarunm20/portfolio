@@ -5,7 +5,7 @@ function Social(props) {
 
     return (
         <Containter className = 'a-social-container' >
-            <a href = {props.link} target = '_blank'>
+            <a href = {props.link}>
                 <img className = 'a-social-image' alt = 'social icon' src = {props.imgSrc} />
             </a>
         </Containter>
