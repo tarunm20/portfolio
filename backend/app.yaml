@@ -1,2 +1,0 @@
-service: mail-api
-runtime: nodejs10

@@ -7,7 +7,7 @@ const message = {
     message: 'test'
 }
 
-axios.post('http://34.64.116.243/api/email', message)
+axios.post('http://34.64.116.243:80/api/email', message)
     .then(res => {
         console.log(res.status, res.data);
     })
