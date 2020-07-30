@@ -1,13 +1,20 @@
-let axios = require('Axios');
+let axios = require('axios');
 
-const message = {
-    from: 'tarun.murugan5@gmail.com',
-    to: 'tarun.murugan24@gmail.com',
-    subject: 'test',
-    message: 'test'
-}
+// const message = {
+//     from: 'tarun.murugan5@gmail.com',
+//     to: 'tarun.murugan24@gmail.com',
+//     subject: 'test',
+//     message: 'test'
+// }
 
-axios.post('http://34.64.116.243:80/api/email', message)
-    .then(res => {
-        console.log(res.status, res.data);
-    })
+// axios.post('http://34.64.116.243:80/api/email', message)
+//     .then(res => {
+//         console.log(res.status, res.data);
+//     })
+
+// axios.get('http://localhost/api/jobs/githubData')
+//     .then(res => {
+//         console.log(res.data)
+//     }).catch(err => {
+//         console.log(err);
+//     })

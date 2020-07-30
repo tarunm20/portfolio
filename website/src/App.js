@@ -31,7 +31,7 @@ class App extends React.Component {
         subTitle: '(；一_一)'
       },
       projects: {
-        title: 'here is what I\'ve been working on',
+        title: 'here are my github repositories',
         subTitle: '（っ＾▿＾）'
       },
       contact: {
@@ -54,6 +54,7 @@ class App extends React.Component {
                   <Nav.Link href = '/'>Home</Nav.Link>
                   <Nav.Link href = '/about'>About Me</Nav.Link>
                   <Nav.Link href = '/projects'>Projects</Nav.Link>
+                  <Nav.Link href = 'https://tarunmurugan.wordpress.com/' target="_blank">Blog</Nav.Link>
                   <Nav.Link href = '/contact'>Contact</Nav.Link>
                 </Nav>
               </NavBar.Collapse>

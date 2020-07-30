@@ -4,9 +4,9 @@ class Content extends Component {
     constructor(props){
         super(props);
         this.state = {
-            about: 'Once again, I\'m Tarun. I currently live in India but will move to the US.',
+            about: 'Once again, I\'m Tarun. I currently live in India but will move to the US. I\'m the type of person who would spend days working on a problem till I have figured it out. The reason I persue computer science is because it helps me develop my ideas into products that other poeple can use. ',
             education: 'I have completed my school education at the American International School in Chennai and will attend the University of California San Diego in the Fall of 2021.',
-            experience: 'I am fluent in Python, Java, Javascript, HTML, and CSS. The frameworks and modules I have worked with include Django, React.js, Express.js, TensorFlow, and Node.js.',
+            experience: 'I have worked with Python, Java, Javascript, HTML, and CSS. The frameworks and modules I have worked with include Django, React, Express, TensorFlow, and Node.',
             current: 'I\'m currently working on two projects: aReminder and LanChat.'
         }
     }

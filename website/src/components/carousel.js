@@ -4,7 +4,7 @@ import Row from 'react-bootstrap/Row';
 
 import Card from '../components/card';
 import anime from '../assets/images/anime.png';
-import language from '../assets/images/language.png'
+import list from '../assets/images/list.jpg'
 
 
 class Carousel extends Component {
@@ -23,9 +23,9 @@ class Carousel extends Component {
                 },
                 {
                     id: 1,
-                    title: 'LanChat',
-                    subTitle: 'Learn languages by chatting with others.',
-                    imgSrc: language,
+                    title: 'MyList',
+                    subTitle: 'Stay productive with a simple to-do list.',
+                    imgSrc: list,
                     link: '',
                     selected: false,
                     alt: ''

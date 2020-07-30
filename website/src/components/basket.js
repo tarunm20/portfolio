@@ -21,7 +21,7 @@ class Basket extends Component {
                 {
                     id: 1,
                     imgSrc: instagram,
-                    link: 'https://www.youtube.com/watch?v=COMaG7pObgE'
+                    link: 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
                 }
             ]
         };
