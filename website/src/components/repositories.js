@@ -9,7 +9,7 @@ class Repositories extends Component {
   }
 
   async getDBRepos() {
-    await axios.get("http://localhost:80/api/repos")
+    await axios.get("http://localhost:8080/api/repos")
     .then(res => {
       this.setState({
         repos: res.data

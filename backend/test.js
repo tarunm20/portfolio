@@ -12,9 +12,9 @@ let axios = require('axios');
 //         console.log(res.status, res.data);
 //     })
 
-// axios.get('http://localhost/api/jobs/githubData')
-//     .then(res => {
-//         console.log(res.data)
-//     }).catch(err => {
-//         console.log(err);
-//     })
+axios.get('http://34.64.116.243:8080/api/repos')
+    .then(res => {
+        console.log(res.data)
+    }).catch(err => {
+        console.log(err);
+    })

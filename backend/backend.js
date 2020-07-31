@@ -66,7 +66,7 @@ app.post('/api/email', (req, res, next) => {
         });
 });
 
-const PORT = 80;
+const PORT = 8080;
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}...`);
   });
