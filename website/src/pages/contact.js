@@ -38,7 +38,7 @@ class ContactPage extends Component {
             disabled: true,
         });
 
-        Axios.post('http://34.64.116.243:8080/api/email', this.state)
+        Axios.post('https://backend-dot-atlantean-stone-282412.wl.r.appspot.com/api/email', this.state)
             .then(res => {
                 if(res.data.success) {
                     this.setState({
