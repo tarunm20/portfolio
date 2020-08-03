@@ -5,6 +5,9 @@ env: standard
 
 # [START handlers]
 handlers:
+  - url: /sitemap.xml
+    static_files: sitemap.xml
+    upload: sitemap.xml
   - url: /(.*\..+)$
     static_files: build/\1
     upload: build/(.*\..+)$

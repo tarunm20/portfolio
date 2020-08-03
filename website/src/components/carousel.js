@@ -3,8 +3,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 
 import Card from '../components/card';
-import anime from '../assets/images/anime.png';
-import list from '../assets/images/list.jpg'
+import anime from '../assets/images/anime.webp';
+import list from '../assets/images/list.webp'
 
 
 class Carousel extends Component {

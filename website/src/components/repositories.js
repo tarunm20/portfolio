@@ -5,31 +5,33 @@ import axios from 'axios';
 
 class Repositories extends Component {
   state = {
-    repos: "SUCC"
+    repos: ""
   }
 
   async getDBRepos() {
     await axios.get("https://backend-dot-atlantean-stone-282412.wl.r.appspot.com/api/repos")
-    .then(res => {
+    .then(async res => {
+      let reposDisplay = [];
+      let loadRepos = () => {
+        for(let repo of res.data) {
+          reposDisplay.push(
+            <tr key = {repo.id}>
+              <td>{repo.name}</td>
+              <td>{repo.description}</td>
+              <td><a href = {repo.url} target = '_blank' rel = 'noopener noreferrer'>{repo.url}</a></td>
+            </tr>
+          );
+        }
+      }
+      await loadRepos()
       this.setState({
-        repos: res.data
+        repos: reposDisplay
       });
     });
   }  
 
   render() { 
     this.getDBRepos()
-
-    let reposDisplay = [];
-    for(let repo of this.state.repos) {
-      reposDisplay.push(
-        <tr key = {repo.id}>
-          <td>{repo.name}</td>
-          <td>{repo.description}</td>
-          <td><a href = {repo.url} target = '_blank' rel = 'noopener noreferrer'>{repo.url}</a></td>
-        </tr>
-      );
-    }
 
     return (
       <Container>
@@ -42,7 +44,7 @@ class Repositories extends Component {
             </tr>
           </thead>
           <tbody>
-            {reposDisplay}
+            {this.state.repos}
           </tbody>
         </Table>
       </Container>
