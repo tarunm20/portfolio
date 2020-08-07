@@ -1,16 +1,19 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
+import React from "react";
 
-function Social(props) {
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {faGithub, faInstagram} from "@fortawesome/free-brands-svg-icons";
 
-    return (
-        <Container className = 'a-social-container' >
-            <a href = {props.link} target = '_blank' rel = 'noopener noreferrer'>
-                <img className = 'a-social-image' alt = 'social icon' src = {props.imgSrc} />
-            </a>
-        </Container>
-    );
+function Social() {
+  return (
+    <div className="f-social-container">
+      <a href="https://github.com/tarunm20" className="github social">
+        <FontAwesomeIcon icon={faGithub} size="2x" />
+      </a>
+      <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" className="instagram social">
+        <FontAwesomeIcon icon={faInstagram} size="2x" />
+      </a>
+    </div>
+  );
 }
-
  
 export default Social;

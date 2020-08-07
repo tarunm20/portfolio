@@ -56,7 +56,7 @@ class Carousel extends Component {
     
     render() { 
         return (
-            <Container>
+            <Container className="p-carousel">
                 <Row className = 'justify-content-around'>
                     {this.makeItems(this.state.items)}
                 </Row>

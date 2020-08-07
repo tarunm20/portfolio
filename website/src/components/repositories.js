@@ -5,10 +5,11 @@ import axios from 'axios';
 
 class Repositories extends Component {
   state = {
-    repos: ""
+    repos: <tr></tr>
   }
 
   async getDBRepos() {
+
     await axios.get("https://backend-dot-atlantean-stone-282412.wl.r.appspot.com/api/repos")
     .then(async res => {
       let reposDisplay = [];
@@ -18,7 +19,7 @@ class Repositories extends Component {
             <tr key = {repo.id}>
               <td>{repo.name}</td>
               <td>{repo.description}</td>
-              <td><a href = {repo.url} target = '_blank' rel = 'noopener noreferrer'>{repo.url}</a></td>
+              <td><a href = {repo.url} target = '_blank' rel = 'noopener noreferrer'>Link</a></td>
             </tr>
           );
         }
@@ -30,17 +31,19 @@ class Repositories extends Component {
     });
   }  
 
-  render() { 
-    this.getDBRepos()
+  componentDidMount() {
+    this.getDBRepos();
+  }
 
+  render() { 
     return (
       <Container>
-        <Table striped bordered hover>
+        <Table striped bordered hover responsive>
           <thead>
             <tr>
-              <th>Name</th>
-              <th>Description</th>
-              <th>Link</th>
+              <th style={{width: '15%'}}>Name</th>
+              <th style={{width: '50%'}}>Description</th>
+              <th style={{width: '10%'}}>Link</th>
             </tr>
           </thead>
           <tbody>

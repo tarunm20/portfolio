@@ -4,7 +4,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import Container from 'react-bootstrap/Container';
 import NavBar from 'react-bootstrap/NavBar';
-import Nav from 'react-bootstrap/Nav'
+import Nav from 'react-bootstrap/Nav';
+import Footer from './components/footer';
 
 import HomePage from './pages/home';
 import AboutPage from './pages/about';
@@ -65,6 +66,7 @@ class App extends React.Component {
               <Route path = '/projects' exact render = { () => <ProjectsPage title = {this.state.projects.title} subTitle = {this.state.projects.subTitle} />} />
               <Route path = '/contact' exact render = { () => <ContactPage title = {this.state.contact.title} subTitle = {this.state.contact.subTitle} /> } />
             </Switch>
+            <Footer />
           </Container>
         </Router>
       </React.Fragment>

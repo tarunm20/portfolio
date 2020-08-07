@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
 
 class Content extends Component {
     constructor(props){
@@ -12,12 +13,12 @@ class Content extends Component {
     }
     render() { 
         return (
-            <React.Fragment>
+            <Container style={{margin: "20px 20px 100px"}}>
                 <p> {this.state.about} </p>
                 <p> {this.state.education} </p>
                 <p> {this.state.experience} </p>
                 <p> {this.state.current} </p>
-            </React.Fragment>
+            </Container>
         );
     }
 }

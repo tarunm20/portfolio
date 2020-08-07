@@ -1,20 +1,11 @@
-/* body {
-  background-color: #282c34;
-  color: white;
-  padding: 40px;
-  font-family: Arial;
-  text-align: center;
+
+.p-carousel {
+    margin-bottom: 70px;
 }
-
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-} */
 
 .p-card {
     margin: 20px;
-    margin-bottom: 200px;
+    padding-bottom: 15px;
     width: 300px;
 }
 
@@ -29,7 +20,8 @@ code {
 
 .p-card-info {
     margin-top: 10px;
-    min-height: 100px;
+    min-height: 50px;
+    margin-bottom: 20px;
 }
 
 .p-card-title {
@@ -48,6 +40,7 @@ code {
 
 .c-form-container {
     margin: auto;
+    margin-bottom: 100px;
     width: 60%;
 }
 
@@ -61,19 +54,36 @@ code {
     padding: 10px 15px;
 }
 
-.a-social-image {
-    width: 50px;
-    height: 50px;
+.f-social-container {
+    padding: 15px;
+    bottom: 0;
 }
 
-.a-basket-container {
-    margin-top: 60px;
-    justify-content: space-between;
+a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
 }
 
-.a-social-container {
-    text-align: center;
-    margin: 10px 10px 10px 10px
-    
+a.social:hover {
+    transform: translateY(-2px);
 }
 
+a.github {
+    color: #24292e;
+}
+
+a.instagram {
+    color: #E1306C;
+}
+
+.footer {
+    background: #eee;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.credits {
+    padding: 20px;
+}
