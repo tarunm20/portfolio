@@ -38,6 +38,16 @@
     margin-top: 20px;
 }
 
+.p-repo-container {
+    margin-bottom: 50px;
+}
+
+.p-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .c-form-container {
     margin: auto;
     margin-bottom: 100px;
@@ -79,7 +89,7 @@ a.instagram {
 
 .footer {
     background: #eee;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
 }
