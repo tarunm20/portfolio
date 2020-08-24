@@ -7,7 +7,7 @@ import Social from './social';
 
 function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" style={{bottom:"0px"}}>
       <Row md={12}>
         <Col>
           <Social />

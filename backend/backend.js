@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -25,7 +26,8 @@ app.get('/api', (req, res, next) => {
 
 //Sending MongoDB githubData collection information
 app.get('/api/repos', async (req, res, next) => {
-    const connectionString = "mongodb+srv://mtarun:mtarun@cluster0.ttdxg.gcp.mongodb.net/tarunmurugan?retryWrites=true&w=majority";
+    const connectionString = process.env.MONGO_URI;
+    console.log(connectionString)
     const client = new MongoClient(connectionString, { useNewUrlParser: true, useUnifiedTopology: true });
     await client.connect();
     let repos = await client.db("tarunmurugan").collection("githubData").find().toArray();
@@ -44,7 +46,7 @@ app.get('/api/jobs/githubData', async (req, res, next) => {
 
 //Sending email with sendgrid
 app.post('/api/email', (req, res, next) => {
-    sendGrid.setApiKey('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');
+    sendGrid.setApiKey(process.env.SENDGRID_KEY);
     const msg = {
         to: 'tarun.murugan24@gmail.com',
         from: 'tarun.murugan24@gmail.com',

@@ -3,7 +3,7 @@ const {MongoClient, connect} = require('mongodb');
 
 async function main() {
   const url = "https://api.github.com/users/tarunm20/repos";
-  const auth_token = "94404bc985380f3ba5b9af9309dd52f02afe3d11";
+  const auth_token = process.env.GITHUB_AUTH_TOKEN;
   let params = {
     token: auth_token
   };
@@ -33,7 +33,7 @@ async function main() {
     return repos;
   }
 
-  const connectionString = "mongodb+srv://mtarun:mtarun@cluster0.ttdxg.gcp.mongodb.net/tarunmurugan?retryWrites=true&w=majority";
+  const connectionString = process.env.MONGO_URI;
   const client = new MongoClient(connectionString, {useUnifiedTopology: true});
 
   //Adding all repositories needed to the MongoDB database

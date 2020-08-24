@@ -42,12 +42,6 @@
     margin-bottom: 50px;
 }
 
-.p-loading {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .c-form-container {
     margin: auto;
     margin-bottom: 100px;
@@ -89,11 +83,17 @@ a.instagram {
 
 .footer {
     background: #eee;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
 }
 
 .credits {
     padding: 20px;
+}
+
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
