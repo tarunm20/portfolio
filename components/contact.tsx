@@ -15,7 +15,6 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Button } from "@/components/ui/button"
 import { toast } from "sonner"
-import { CheckCircle } from "lucide-react" // Green check icon from lucide-react
 
 const formSchema = z.object({
   name: z.string().min(1, "Name is required"),
