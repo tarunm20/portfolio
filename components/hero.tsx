@@ -345,7 +345,7 @@ export default function Hero() {
           animate={{ letterSpacing: '0.1em' }}
           transition={{ duration: 1.5 }}
         >
-          Hi, I'm Tarun <motion.span 
+          Hi, I&apos;m Tarun <motion.span 
             animate={{ rotate: [0, 20, -20, 0] }}
             transition={{ repeat: Infinity, duration: 2 }}
             className="inline-block origin-bottom-right"
@@ -358,7 +358,7 @@ export default function Hero() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5, duration: 1 }}
         >
-          I'm a full-stack developer who loves building random stuff
+          I&apos;m a full-stack developer who loves building random stuff
         </motion.p>
         
       </motion.div>
