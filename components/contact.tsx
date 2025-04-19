@@ -54,7 +54,7 @@ export default function Contact() {
         toast.error("Something went wrong. Please try again later.")
       }
     } catch (error) {
-      toast.error("Network error. Check your connection.")
+      toast.error("Network error. Check your connection. | " + error)
     }
   }
 
