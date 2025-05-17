@@ -33,29 +33,30 @@ const experiences = [
 ];
 
 export default function WorkExperience() {
+    // Animation variants
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
-            transition: {
-                staggerChildren: 0.2
+            transition: { 
+                staggerChildren: 0.3
             }
         }
     };
 
     const itemVariants = {
-        hidden: { opacity: 0, y: 30 },
+        hidden: { opacity: 0, y: 20 },
         visible: {
             opacity: 1,
             y: 0,
-            transition: {
+            transition: { 
                 duration: 0.6,
                 ease: "easeOut"
             }
         }
     };
 
-    const hoverVariants = {
+    const cardHoverVariants = {
         hover: {
             y: -5,
             boxShadow: "0 10px 25px -5px rgba(0, 0, 0, 0.1)",
@@ -68,7 +69,7 @@ export default function WorkExperience() {
     };
 
     return (
-        <section id="work-experience" className="py-20 px-4 sm:px-8 bg-gray-50 dark:bg-gray-900">
+        <section id="work-experience" className="py-16 px-4 bg-gray-50 dark:bg-gray-900">
             <motion.h2 
                 className="text-3xl font-bold mb-12 text-center text-gray-800 dark:text-white"
                 initial={{ opacity: 0, y: 20 }}
@@ -79,69 +80,54 @@ export default function WorkExperience() {
                 Work Experience
             </motion.h2>
             
-            <div className="max-w-4xl mx-auto">
-                <div className="relative">
-                    {/* Animated Timeline line */}
+            <motion.div 
+                className="max-w-4xl mx-auto"
+                variants={containerVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-100px" }}
+            >
+                {experiences.map((exp, index) => (
                     <motion.div 
-                        className="absolute left-1/2 w-1 h-full bg-gradient-to-b from-indigo-300 to-indigo-500 transform -translate-x-1/2"
-                        initial={{ height: 0 }}
-                        whileInView={{ height: "100%" }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 1, ease: "easeInOut" }}
-                    />
-                    
-                    {/* Experience items */}
-                    <motion.div 
-                        className="space-y-8"
-                        variants={containerVariants}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, margin: "-100px" }}
+                        key={index} 
+                        className="mb-12"
+                        variants={itemVariants}
                     >
-                        {experiences.map((exp, index) => (
-                            <motion.div 
-                                key={index} 
-                                className={`relative flex ${index % 2 === 0 ? 'justify-start' : 'justify-end'}`}
-                                variants={itemVariants}
-                            >
-                                {/* Content with enhanced hover effects */}
-                                <motion.div
-                                    className={`
-                                        w-full sm:w-5/12 p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md border border-gray-200 dark:border-gray-700 relative
-                                        transition-all duration-300 ease-in-out
-                                        ${index % 2 === 0 ? 'sm:mr-auto' : 'sm:ml-auto'}
-                                    `}
-                                    whileHover="hover"
-                                    variants={hoverVariants}
+                        <div className="flex flex-col md:flex-row gap-6">
+                            {/* Left side - Always visible */}
+                            <div className="md:w-1/3">
+                                <motion.div 
+                                    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+                                    whileHover={cardHoverVariants.hover}
                                 >
-                                    {/* Animated Circle */}
-                                    <motion.div
-                                        className={`
-                                            absolute top-6 w-4 h-4 bg-indigo-600 dark:bg-indigo-400 rounded-full 
-                                            transition-all duration-300 ease-in-out
-                                            ${index % 2 === 0 ? 'sm:-right-7' : 'sm:-left-7'}
-                                        `}
-                                        whileHover={{ scale: 1.2, backgroundColor: "#818cf8" }}
-                                    />
-                                    
-                                    <h3 className="text-xl font-semibold text-gray-800 dark:text-white group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+                                    <h3 className="text-lg font-semibold text-gray-800 dark:text-white">
                                         {exp.title}
                                     </h3>
-                                    <h4 className="text-md text-indigo-600 dark:text-indigo-400 mb-2 transition-colors duration-300">
+                                    <h4 className="text-indigo-600 dark:text-indigo-400">
                                         {exp.company}
                                     </h4>
-                                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">{exp.duration}</p>
-                                    <p className="text-gray-600 dark:text-gray-300 group-hover:text-gray-800 dark:group-hover:text-gray-200 transition-colors duration-300 mb-4">
+                                    <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+                                        {exp.duration}
+                                    </p>
+                                </motion.div>
+                            </div>
+                            
+                            {/* Right side - Always visible */}
+                            <div className="md:w-2/3">
+                                <motion.div 
+                                    className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md border border-gray-200 dark:border-gray-700"
+                                    whileHover={cardHoverVariants.hover}
+                                >
+                                    <p className="text-gray-600 dark:text-gray-300 mb-4">
                                         {exp.description}
                                     </p>
                                     
-                                    {/* Tech Stack Badges with animation */}
                                     <motion.div 
                                         className="flex flex-wrap gap-2"
                                         initial={{ opacity: 0 }}
                                         whileInView={{ opacity: 1 }}
                                         viewport={{ once: true }}
-                                        transition={{ delay: 0.4 }}
+                                        transition={{ delay: 0.3 }}
                                     >
                                         {exp.techStack.map((tech, techIndex) => (
                                             <motion.span
@@ -159,11 +145,11 @@ export default function WorkExperience() {
                                         ))}
                                     </motion.div>
                                 </motion.div>
-                            </motion.div>
-                        ))}
+                            </div>
+                        </div>
                     </motion.div>
-                </div>
-            </div>
+                ))}
+            </motion.div>
         </section>
     );
 }
