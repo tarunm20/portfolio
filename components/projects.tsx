@@ -38,20 +38,6 @@ const projects = [
     ]
   },
   {
-    title: "Synth - AI Flashcard Generator",
-    description: "A production-ready web application that automatically generates flashcards from uploaded documents using Claude AI, featuring intelligent study modes, progress tracking, and spaced repetition for effective learning.",
-    techStack: ["Spring Boot", "Next.js", "PostgreSQL", "Claude AI", "Docker", "JWT", "TypeScript"],
-    github: "https://github.com/tarunm20/synth",
-    demo: null,
-    highlights: [
-      "AI-powered flashcard generation",
-      "Spaced repetition algorithm",
-      "Progress tracking & analytics",
-      "Secure JWT authentication",
-      "Production-ready Docker deployment"
-    ]
-  },
-  {
     title: "Photon Mapping Raytracer",
     description: "A photorealistic raytracer implementing advanced rendering techniques including photon mapping for global illumination, developed as part of UCSD's CSE 168 computer graphics course.",
     techStack: ["C++", "OpenGL", "GLSL"],
