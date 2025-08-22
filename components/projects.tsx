@@ -11,10 +11,23 @@ import { Github, ExternalLink } from "lucide-react"
 
 const projects = [
   {
+    title: "NeuroLeaf",
+    description: "An AI-powered flashcard learning platform that generates personalized study materials from documents and provides adaptive testing with spaced repetition.",
+    techStack: ["Gemini API", "TypeScript", "Next.js", "React"],
+    demo: "https://neuroleaf.ai/",
+    highlights: [
+      "AI-powered flashcard generation from documents",
+      "Adaptive testing with spaced repetition",
+      "Personalized study recommendations",
+      "Document upload and processing",
+      "Progress tracking and analytics"
+    ]
+  },
+  {
     title: "BlueTurtle.ai - Chat with Your Data",
     description: "An enterprise-grade AI analytics platform that enables teams to query databases using natural language, automatically generating SQL queries, visualizations, and actionable insights without requiring technical expertise.",
     techStack: ["AI/ML", "Natural Language Processing", "SQL Generation", "Data Visualization", "Enterprise Security"],
-    github: null, // Add if you have a public repo
+    github: null,
     demo: "https://blueturtle.ai",
     highlights: [
       "Natural language to SQL query translation",
