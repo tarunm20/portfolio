@@ -38,6 +38,36 @@ const projects = [
     ]
   },
   {
+    title: "Garden LLM Platform",
+    description: "An open-source infrastructure system for deploying and managing language models in production. Provides a complete platform for running inference, fine-tuning models, and monitoring performance with integrated observability.",
+    techStack: ["FastAPI", "PostgreSQL", "MLflow", "Prometheus", "Grafana", "Docker"],
+    github: "https://github.com/tarunm20/garden",
+    demo: null,
+    highlights: [
+      "Production-ready inference API with timeout safeguards",
+      "Background job execution for training and fine-tuning",
+      "MLflow integration for experiment tracking",
+      "Prometheus metrics with Grafana dashboards",
+      "Async FastAPI architecture for high performance",
+      "Docker Compose orchestration with 5 integrated services"
+    ]
+  },
+  {
+    title: "ONNX Inference Engine",
+    description: "A lightweight C++ inference engine for executing ONNX models with a focus on GPT-2 text generation. Features clean architecture with full BPE tokenization and multiple sampling strategies for educational and customization purposes.",
+    techStack: ["C++", "ONNX Runtime", "CMake", "BPE Tokenization"],
+    github: "https://github.com/tarunm20/inference",
+    demo: null,
+    highlights: [
+      "Clean, minimal C++ implementation",
+      "Full GPT-2 tokenizer with byte-pair encoding",
+      "Efficient model inference using ONNX Runtime",
+      "Multiple sampling approaches (greedy, temperature, top-k, nucleus)",
+      "Command-line interface for easy interaction",
+      "Educational codebase prioritizing clarity"
+    ]
+  },
+  {
     title: "Photon Mapping Raytracer",
     description: "A photorealistic raytracer implementing advanced rendering techniques including photon mapping for global illumination, developed as part of UCSD's CSE 168 computer graphics course.",
     techStack: ["C++", "OpenGL", "GLSL"],
